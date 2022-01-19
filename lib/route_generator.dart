@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_alert_app/src/screens/homescreen.dart';
-
 import 'package:weather_alert_app/src/screens/forecast_screen.dart';
-
 import 'package:weather_alert_app/src/screens/weather_info_screen.dart';
-
 import 'package:weather_alert_app/src/screens/alert_rescue.dart';
 
 class RouteGenerator {
