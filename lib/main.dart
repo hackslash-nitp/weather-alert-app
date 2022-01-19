@@ -4,10 +4,10 @@ import 'package:weather_alert_app/route_generator.dart';
 import 'package:flutter/material.dart';
 import 'package:weather_alert_app/services/navigation_service.dart';
 import 'package:dotenv/dotenv.dart' show env, load;
+import 'package:http/http.dart' as http;
 
-void main() {
+Future<void> main() async {
   load();
-
   setupLocator();
   runApp(MyApp());
 }
