@@ -15,21 +15,22 @@ class ForecastScreen extends StatelessWidget {
     return BaseView<WeatherInfoViewModel>(
         onModelReady: (model) => model.getWeatherData(),
         builder: (ctx, model, child) => SafeArea(
-            child: Scaffold(
+                child: Scaffold(
               body: SingleChildScrollView(
                 child: Container(
                   child: Column(
                     children: [
-                      SizedBox(height: 90),
+                      // SizedBox(height: 90),
+                      SearchBar(),
                       Container(
                         height: 30,
                         width: width,
-                        child:  Center(
+                        child: Center(
                             child: Text("No alert now",
                                 style: TextStyle(
                                   color: Colors.green,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: width/17,
+                                  fontSize: width / 17,
                                 ))),
                       ),
                       Container(
@@ -39,7 +40,8 @@ class ForecastScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12.0),
                           ),
-                          child: Center(child: Text("December 29 - January 10")),
+                          child:
+                              Center(child: Text("December 29 - January 10")),
                           elevation: 43,
                         ),
                       ),
@@ -72,7 +74,8 @@ class ForecastScreen extends StatelessWidget {
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 20),
-                                    Icon(Icons.wb_sunny, color: Colors.yellow[500]),
+                                    Icon(Icons.wb_sunny,
+                                        color: Colors.yellow[500]),
                                     const SizedBox(height: 20),
                                     Text('23',
                                         style: TextStyle(
@@ -119,7 +122,8 @@ class ForecastScreen extends StatelessWidget {
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 20),
-                                    Icon(Icons.wb_sunny, color: Colors.yellow[500]),
+                                    Icon(Icons.wb_sunny,
+                                        color: Colors.yellow[500]),
                                     const SizedBox(height: 20),
                                     Text('23',
                                         style: TextStyle(
@@ -166,7 +170,8 @@ class ForecastScreen extends StatelessWidget {
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 20),
-                                    Icon(Icons.wb_sunny, color: Colors.yellow[500]),
+                                    Icon(Icons.wb_sunny,
+                                        color: Colors.yellow[500]),
                                     const SizedBox(height: 20),
                                     Text('23',
                                         style: TextStyle(
@@ -213,7 +218,8 @@ class ForecastScreen extends StatelessWidget {
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 20),
-                                    Icon(Icons.wb_sunny, color: Colors.yellow[500]),
+                                    Icon(Icons.wb_sunny,
+                                        color: Colors.yellow[500]),
                                     const SizedBox(height: 20),
                                     Text('23',
                                         style: TextStyle(
@@ -240,98 +246,105 @@ class ForecastScreen extends StatelessWidget {
                       ),
                       Container(
                         width: width / 1.1,
-                        child: Column(
-                            children: [
-                              Container(
-                                height: 105,
-                                width: width / 1.1,
-                                child: Card(
-                                    color: const Color.fromRGBO(255, 255, 255, 1),
-                                    shape: const RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.only(
-                                            topLeft: Radius.circular(11),
-                                            topRight: Radius.circular(11))),
-                                    child: Column(
+                        child: Column(children: [
+                          Container(
+                            height: 105,
+                            width: width / 1.1,
+                            child: Card(
+                                color: const Color.fromRGBO(255, 255, 255, 1),
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(11),
+                                        topRight: Radius.circular(11))),
+                                child: Column(
+                                  children: [
+                                    Row(
                                       children: [
-                                        Row(
-                                          children:  [
-                                            SizedBox(width: width / 44),
-                                            Text(
-                                              "Day",
-                                              style: TextStyle(
-                                                color: Color.fromRGBO(0, 0, 0, 1),
-                                                fontWeight: FontWeight.w400,
-                                                fontSize: width / 22,
-                                              ),
-                                            ),
-                                            SizedBox(width: width / 4.4),
-                                            Icon(Icons.wb_sunny, color: Colors.yellow),
-                                            SizedBox(width: width / 4.4),
-                                            Text("19"),
-                                            SizedBox(width: width / 22),
-                                            Icon(Icons.arrow_upward, color: Colors.black54),
-                                          ],
-                                        ),
-                                        Container(
-                                          child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: const [
-                                              Text("Sunny,High"),
-                                              Text("......................."),
-                                              Text("............"),
-                                            ],
+                                        SizedBox(width: width / 44),
+                                        Text(
+                                          "Day",
+                                          style: TextStyle(
+                                            color: Color.fromRGBO(0, 0, 0, 1),
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: width / 22,
                                           ),
-                                        )
+                                        ),
+                                        SizedBox(width: width / 4.4),
+                                        Icon(Icons.wb_sunny,
+                                            color: Colors.yellow),
+                                        SizedBox(width: width / 4.4),
+                                        Text("19"),
+                                        SizedBox(width: width / 22),
+                                        Icon(Icons.arrow_upward,
+                                            color: Colors.black54),
                                       ],
-                                    )),
-                              ),
-                              Container(
-                                height: 105,
-                                width: width / 1.1,
-                                child: Card(
-                                    color: Color.fromRGBO(55, 86, 116, 1),
-                                    shape: const RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(11),
-                                            bottomRight: Radius.circular(11))),
-                                    child: Column(
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: const [
+                                          Text("Sunny,High"),
+                                          Text("......................."),
+                                          Text("............"),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                )),
+                          ),
+                          Container(
+                            height: 105,
+                            width: width / 1.1,
+                            child: Card(
+                                color: Color.fromRGBO(55, 86, 116, 1),
+                                shape: const RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                        bottomLeft: Radius.circular(11),
+                                        bottomRight: Radius.circular(11))),
+                                child: Column(
+                                  children: [
+                                    Row(
                                       children: [
-                                        Row(
-                                          children: [
-                                            SizedBox(width: width / 44),
-                                            Text(
-                                              "Night",
-                                              style: TextStyle(
-                                                color: Color.fromRGBO(255, 255, 255, 1),
-                                                fontWeight: FontWeight.w400,
-                                                fontSize: width / 22,
-                                              ),
-                                            ),
-                                            SizedBox(width: width / 4.4),
-                                            Icon(Icons.wb_cloudy_outlined,
-                                                color: Colors.yellow[500]),
-                                            SizedBox(width: width / 4.4),
-                                            Text("19"),
-                                            SizedBox(width: width / 22),
-                                            Icon(Icons.arrow_downward_sharp,
-                                                color: Colors.black54),
-                                          ],
-                                        ),
-                                        Container(
-                                          child: Column(
-                                            mainAxisAlignment: MainAxisAlignment.start,
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: const [
-                                              Text("Sunny,High"),
-                                              Text("......................."),
-                                              Text("............"),
-                                            ],
+                                        SizedBox(width: width / 44),
+                                        Text(
+                                          "Night",
+                                          style: TextStyle(
+                                            color: Color.fromRGBO(
+                                                255, 255, 255, 1),
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: width / 22,
                                           ),
-                                        )
+                                        ),
+                                        SizedBox(width: width / 4.4),
+                                        Icon(Icons.wb_cloudy_outlined,
+                                            color: Colors.yellow[500]),
+                                        SizedBox(width: width / 4.4),
+                                        Text("19"),
+                                        SizedBox(width: width / 22),
+                                        Icon(Icons.arrow_downward_sharp,
+                                            color: Colors.black54),
                                       ],
-                                    )),
-                              ),]),
+                                    ),
+                                    Container(
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: const [
+                                          Text("Sunny,High"),
+                                          Text("......................."),
+                                          Text("............"),
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                )),
+                          ),
+                        ]),
                       ),
                     ],
                   ),

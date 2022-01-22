@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
-      home: Search_bar(),
-    ));
-
-class Search_bar extends StatefulWidget {
-  const Search_bar({Key? key}) : super(key: key);
+class SearchBar extends StatefulWidget {
+  const SearchBar({Key? key}) : super(key: key);
 
   @override
-  _Search_barState createState() => _Search_barState();
+  _SearchBarState createState() => _SearchBarState();
 }
 
-class _Search_barState extends State<Search_bar> {
+class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     double height = MediaQuery.of(context).size.height;
     return SafeArea(
-      child: Scaffold(
-        body: Padding(
+      child: Container(
+        child: Padding(
           padding: const EdgeInsets.fromLTRB(15, 20, 15, 10),
           child: Container(
             height: height / 15,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:weather_alert_app/provider/getit.dart';
 import 'package:weather_alert_app/config/app_config.dart' as config;
 import 'package:weather_alert_app/provider/base_view.dart';
+import 'package:weather_alert_app/src/widgets/search_bar.dart';
 import 'package:weather_alert_app/views/weatherinfo_viewmodel.dart';
 
 class WeatherInfoScreen extends StatelessWidget {
@@ -13,48 +14,49 @@ class WeatherInfoScreen extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return BaseView<WeatherInfoViewModel>(
         builder: (ctx, model, child) => SafeArea(
-            child : Scaffold(
+                child: Scaffold(
               body: SingleChildScrollView(
                 child: Container(
                   width: width,
-                  decoration: const BoxDecoration(
-
-                  ),
+                  decoration: const BoxDecoration(),
                   child: Column(
-                    crossAxisAlignment :CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 90),
+                      // SizedBox(height: 90),
+                      SearchBar(),
                       Container(
                           height: 223,
-                          width: width/1,
+                          width: width / 1,
                           child: Card(
                             color: Color.fromRGBO(255, 255, 255, 1),
                             child: Column(
                               children: [
                                 Row(
-                                  children:  [
+                                  children: [
                                     SizedBox(
-                                      width: width/8,
+                                      width: width / 8,
                                     ),
                                     Text(
                                       "29-Dec-2021",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w400,
-                                          fontSize: width/20,
-                                          color: Color.fromRGBO(101, 98, 98, 1)),
+                                          fontSize: width / 20,
+                                          color:
+                                              Color.fromRGBO(101, 98, 98, 1)),
                                     ),
                                     SizedBox(
-                                      width: width/4,
+                                      width: width / 4,
                                     ),
                                     Text(
                                       "9:02 PM",
                                       style: TextStyle(
                                           fontWeight: FontWeight.w400,
-                                          fontSize: width/20,
-                                          color: Color.fromRGBO(101, 98, 98, 1)),
+                                          fontSize: width / 20,
+                                          color:
+                                              Color.fromRGBO(101, 98, 98, 1)),
                                     ),
                                     SizedBox(
-                                      width: width/8.3,
+                                      width: width / 8.3,
                                     ),
                                   ],
                                 ),
@@ -62,7 +64,7 @@ class WeatherInfoScreen extends StatelessWidget {
                                   children: [
                                     Container(
                                         height: 98,
-                                        width: width/7.5,
+                                        width: width / 7.5,
                                         child: Icon(Icons.wb_cloudy,
                                             color: Colors.blue)),
                                     Column(
@@ -73,7 +75,7 @@ class WeatherInfoScreen extends StatelessWidget {
                                         Text(
                                           "12 C",
                                           style: TextStyle(
-                                            fontSize: width/11.8,
+                                            fontSize: width / 11.8,
                                             fontWeight: FontWeight.w400,
                                             color: Color.fromRGBO(0, 0, 0, 1),
                                           ),
@@ -81,23 +83,24 @@ class WeatherInfoScreen extends StatelessWidget {
                                         Text(
                                           "Thunderstorm",
                                           style: TextStyle(
-                                            fontSize: width/22,
+                                            fontSize: width / 22,
                                             fontWeight: FontWeight.w400,
-                                            color: Color.fromRGBO(20, 48, 90, 1),
+                                            color:
+                                                Color.fromRGBO(20, 48, 90, 1),
                                           ),
                                         ),
                                         SizedBox(
                                           height: 10,
                                         ),
                                         Row(
-                                          children:   [
+                                          children: [
                                             Text(
                                               "19 C",
                                               style: TextStyle(
-                                                fontSize: width/22,
+                                                fontSize: width / 22,
                                                 fontWeight: FontWeight.w400,
-                                                color:
-                                                Color.fromRGBO(20, 48, 90, 1),
+                                                color: Color.fromRGBO(
+                                                    20, 48, 90, 1),
                                               ),
                                             ),
                                             Icon(Icons.arrow_upward_sharp,
@@ -108,14 +111,14 @@ class WeatherInfoScreen extends StatelessWidget {
                                           height: 10,
                                         ),
                                         Row(
-                                          children:   [
+                                          children: [
                                             Text(
                                               "9 C",
                                               style: TextStyle(
-                                                fontSize: width/22,
+                                                fontSize: width / 22,
                                                 fontWeight: FontWeight.w400,
-                                                color:
-                                                Color.fromRGBO(20, 48, 90, 1),
+                                                color: Color.fromRGBO(
+                                                    20, 48, 90, 1),
                                               ),
                                             ),
                                             Icon(Icons.arrow_downward_sharp,
@@ -125,19 +128,20 @@ class WeatherInfoScreen extends StatelessWidget {
                                       ],
                                     ),
                                     SizedBox(
-                                      width: width/11,
+                                      width: width / 11,
                                     ),
                                     SizedBox(
-                                      width: width/40,
+                                      width: width / 40,
                                       height: 180.0,
                                       child: DecoratedBox(
                                         decoration: BoxDecoration(
-                                          color: Color.fromRGBO(196, 196, 196, 1),
+                                          color:
+                                              Color.fromRGBO(196, 196, 196, 1),
                                         ),
                                       ),
                                     ),
                                     SizedBox(
-                                      width: width/22,
+                                      width: width / 22,
                                     ),
                                     Column(
                                       children: const [
@@ -149,7 +153,7 @@ class WeatherInfoScreen extends StatelessWidget {
                                       ],
                                     ),
                                     SizedBox(
-                                      width:width/22,
+                                      width: width / 22,
                                     ),
                                     Column(
                                       children: const [
@@ -172,12 +176,12 @@ class WeatherInfoScreen extends StatelessWidget {
                       ),
                       Container(
                         height: 30,
-                        child:   Center(
+                        child: Center(
                             child: Text("No alert now",
                                 style: TextStyle(
                                   color: Colors.green,
                                   fontWeight: FontWeight.w500,
-                                  fontSize: width/16.9,
+                                  fontSize: width / 16.9,
                                 ))),
                       ),
                       SizedBox(
@@ -185,7 +189,7 @@ class WeatherInfoScreen extends StatelessWidget {
                       ),
                       Container(
                         height: 127,
-                        width: width/1,
+                        width: width / 1,
                         child: Card(
                           color: Color.fromRGBO(255, 255, 255, 1),
                           shape: const RoundedRectangleBorder(
@@ -197,7 +201,7 @@ class WeatherInfoScreen extends StatelessWidget {
                           child: Row(
                             children: [
                               SizedBox(
-                                width: width/22,
+                                width: width / 22,
                               ),
                               Column(
                                 children: const [
@@ -212,7 +216,7 @@ class WeatherInfoScreen extends StatelessWidget {
                                 ],
                               ),
                               SizedBox(
-                                width: width/2.2,
+                                width: width / 2.2,
                               ),
                               Column(
                                 children: const [
@@ -236,7 +240,7 @@ class WeatherInfoScreen extends StatelessWidget {
                       ),
                       Container(
                         height: 187,
-                        width: width/1,
+                        width: width / 1,
                         child: Card(
                           color: Color.fromRGBO(255, 255, 255, 1),
                           shape: const RoundedRectangleBorder(
@@ -253,14 +257,14 @@ class WeatherInfoScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   SizedBox(
-                                    width: width/29.3,
+                                    width: width / 29.3,
                                   ),
                                   Icon(
                                     Icons.wb_cloudy_rounded,
                                     color: Colors.cyanAccent,
                                   ),
                                   SizedBox(
-                                    width: width/29.3,
+                                    width: width / 29.3,
                                   ),
                                   Column(
                                     children: [
@@ -270,7 +274,7 @@ class WeatherInfoScreen extends StatelessWidget {
                                       Text("AQI",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
-                                            fontSize: width/22,
+                                            fontSize: width / 22,
                                           )),
                                       SizedBox(
                                         height: 15,
@@ -278,28 +282,28 @@ class WeatherInfoScreen extends StatelessWidget {
                                       Text("70 | LOW",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
-                                            fontSize: width/29.3,
+                                            fontSize: width / 29.3,
                                           )),
                                     ],
                                   ),
                                   SizedBox(
-                                    width: width/3,
+                                    width: width / 3,
                                   ),
                                   const Icon(
                                     Icons.wb_cloudy_rounded,
                                     color: Colors.cyanAccent,
                                   ),
                                   Column(
-                                    children:  [
+                                    children: [
                                       Text("Pressure",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
-                                            fontSize: width/22,
+                                            fontSize: width / 22,
                                           )),
                                       Text("1015 mbar",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
-                                            fontSize: width/22,
+                                            fontSize: width / 22,
                                           )),
                                     ],
                                   ),
@@ -311,44 +315,44 @@ class WeatherInfoScreen extends StatelessWidget {
                               Row(
                                 children: [
                                   SizedBox(
-                                    width: width/29.3,
+                                    width: width / 29.3,
                                   ),
                                   Icon(Icons.wb_cloudy),
                                   Column(
                                     children: [
                                       SizedBox(
-                                        width: width/29.3,
+                                        width: width / 29.3,
                                       ),
                                       Text("Chance of Rain",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
-                                            fontSize: width/22,
+                                            fontSize: width / 22,
                                           )),
                                       Text("1 %",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
-                                            fontSize: width/22,
+                                            fontSize: width / 22,
                                           )),
                                     ],
                                   ),
                                   SizedBox(
-                                    width: width/5,
+                                    width: width / 5,
                                   ),
                                   Icon(
                                     Icons.wb_sunny_rounded,
                                     color: Colors.yellow,
                                   ),
                                   Column(
-                                    children:  [
+                                    children: [
                                       Text("UV Index",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w500,
-                                            fontSize: width/22,
+                                            fontSize: width / 22,
                                           )),
                                       Text("1",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
-                                            fontSize:width/22,
+                                            fontSize: width / 22,
                                           )),
                                     ],
                                   ),

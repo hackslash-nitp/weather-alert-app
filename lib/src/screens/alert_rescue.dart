@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:weather_alert_app/config/app_config.dart' as config;
 import 'package:weather_alert_app/provider/base_view.dart';
+import 'package:weather_alert_app/src/widgets/search_bar.dart';
 import 'package:weather_alert_app/views/weatherinfo_viewmodel.dart';
 
 class AlertRescue extends StatelessWidget {
@@ -18,6 +18,7 @@ class AlertRescue extends StatelessWidget {
               child: Scaffold(
                 body: Column(
                   children: [
+                    SearchBar(),
                     Center(
                       child: Container(
                         // height: height/16,
