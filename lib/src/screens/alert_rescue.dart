@@ -21,10 +21,9 @@ class AlertRescue extends StatelessWidget {
                     SearchBar(),
                     Center(
                       child: Container(
-                        // height: height/16,
                         child: Column(
                           children: [
-                            Text(model.info),
+                            Text(model.temp),
                             Text(
                               'Severe Alert',
                               style: TextStyle(

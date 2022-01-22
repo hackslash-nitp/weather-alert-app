@@ -10,6 +10,7 @@ class ForecastScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
     return BaseView<WeatherInfoViewModel>(
@@ -67,7 +68,7 @@ class ForecastScreen extends StatelessWidget {
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 5),
-                                    Text('29/12',
+                                    Text(model.dateP0,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
@@ -77,14 +78,14 @@ class ForecastScreen extends StatelessWidget {
                                     Icon(Icons.wb_sunny,
                                         color: Colors.yellow[500]),
                                     const SizedBox(height: 20),
-                                    Text('23',
+                                    Text(model.maxTemp0,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 20),
-                                    Text("11",
+                                    Text(model.minTemp0,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
@@ -115,7 +116,7 @@ class ForecastScreen extends StatelessWidget {
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 5),
-                                    Text('29/12',
+                                    Text(model.dateP1,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
@@ -125,14 +126,14 @@ class ForecastScreen extends StatelessWidget {
                                     Icon(Icons.wb_sunny,
                                         color: Colors.yellow[500]),
                                     const SizedBox(height: 20),
-                                    Text('23',
+                                    Text(model.maxTemp1,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 20),
-                                    Text('11',
+                                    Text(model.minTemp1,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
@@ -163,7 +164,7 @@ class ForecastScreen extends StatelessWidget {
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 5),
-                                    Text('29/12',
+                                    Text(model.dateP2,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
@@ -173,14 +174,14 @@ class ForecastScreen extends StatelessWidget {
                                     Icon(Icons.wb_sunny,
                                         color: Colors.yellow[500]),
                                     const SizedBox(height: 20),
-                                    Text('23',
+                                    Text(model.maxTemp2,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 20),
-                                    Text('11',
+                                    Text(model.minTemp2,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
@@ -211,7 +212,7 @@ class ForecastScreen extends StatelessWidget {
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 5),
-                                    Text('29/12',
+                                    Text(model.dateP3,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
@@ -221,14 +222,14 @@ class ForecastScreen extends StatelessWidget {
                                     Icon(Icons.wb_sunny,
                                         color: Colors.yellow[500]),
                                     const SizedBox(height: 20),
-                                    Text('23',
+                                    Text(model.maxTemp3,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,
                                           fontSize: width / 27.5,
                                         )),
                                     const SizedBox(height: 20),
-                                    Text('11',
+                                    Text(model.minTemp3,
                                         style: TextStyle(
                                           color: Color.fromRGBO(98, 90, 90, 1),
                                           fontWeight: FontWeight.w400,

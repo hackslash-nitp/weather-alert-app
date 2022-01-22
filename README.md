@@ -1,4 +1,4 @@
-Weather-alert Flutter application.
+Weather-alert Flutter application
 
 ## Getting Started
 
