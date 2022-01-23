@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:weather_alert_app/provider/getit.dart';
 import 'package:weather_alert_app/config/app_config.dart' as config;
 import 'package:weather_alert_app/provider/base_view.dart';
-import 'package:weather_alert_app/views/weatherinfo_viewmodel.dart';
 import 'package:weather/weather.dart';
+import 'package:weather_alert_app/views/Forecast_Info_ViewModel.dart';
 
 class WeatherInfoScreen extends StatelessWidget {
   const WeatherInfoScreen({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class WeatherInfoScreen extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
-    return BaseView<WeatherInfoViewModel>(
+    return BaseView<ForecastInfoViewModel>(
         onModelReady: (model) => model.getWeatherData(),
         builder: (ctx, model, child) => SafeArea(
             child : Scaffold(

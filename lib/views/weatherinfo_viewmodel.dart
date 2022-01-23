@@ -89,6 +89,6 @@ class WeatherInfoViewModel extends BaseModel {
     // info = "weather";
 
 
-    }
+  }
 
 }
