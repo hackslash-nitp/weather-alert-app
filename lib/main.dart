@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       navigatorKey: getIt<NavigationService>().navigatorKey,
       title: 'Weather Alert Flutter',
-      initialRoute: '/forecast',
+      initialRoute: '/weatherinfo',
       onGenerateRoute: RouteGenerator.generateRoute,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
